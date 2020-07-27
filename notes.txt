@@ -1,0 +1,31 @@
+Application
+=============
+The application is build using Django and React. This results in a 3 tier architecture: client, server(API) and DB.
+This  architecture give us the flexibility to scale the different parts of the application when the need arises.
+
+You can find a sequence diagram (here)[https://swimlanes.io/d/J4bU0V4Dj] with more details as to the workflow of the
+application
+
+Running the Application
+=======================
+This is a dockerized application. Use the make command as follows
+
+To build the image
+
+`make setup`
+
+To run the tests
+
+`make test`
+
+To run the application
+
+`make server`
+
+Once you have run the application visit http://localhost:8005 to see the app
+
+Assumptions
+==============
+- The app only needs to server at most 5req/sec
+- The app is running on a single node
+- You have docker already installed locally
